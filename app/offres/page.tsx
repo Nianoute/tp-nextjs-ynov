@@ -6,7 +6,9 @@ import Link from "next/link";
 
 export default async function OffresPage() {
   const client = createClient();
-  const offres = await client.getAllByType("offres");
+  const offres = await client.getAllByType("offres", {
+    orderings: [{ field: "my.offres.date_publication", direction: "desc" }],
+  });
 
   let listeTechnologies: KeyTextField[] = [];
 
@@ -15,7 +17,6 @@ export default async function OffresPage() {
       if (!listeTechnologies.includes(technologie.technologieName)) {
         listeTechnologies.push(technologie.technologieName);
       }
-      console.log(listeTechnologies);
     });
   });
 
