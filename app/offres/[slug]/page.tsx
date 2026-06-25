@@ -32,7 +32,12 @@ export default async function OffrePage({ params }: OffrePageType) {
       <Title tag="h1">{offre.data.title}</Title>
       <p>{offre.data.date}</p>
       {offre.data.technologies.map((technologie) => (
-        <p key={technologie.technologieName}>{technologie.technologieName}</p>
+        <Link
+          href={`/technologies/${technologie.technologieName}`}
+          key={technologie.technologieName}
+        >
+          {technologie.technologieName}
+        </Link>
       ))}
       <p>Synopsis</p>
       <p>{offre.data.synopsis}</p>

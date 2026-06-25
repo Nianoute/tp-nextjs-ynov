@@ -1,3 +1,3 @@
-export default function TagsPage() {
-  return <div>Tags</div>;
+export default function TechnologiesPage() {
+  return <div>Technologies</div>;
 }
