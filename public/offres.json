@@ -1,0 +1,20 @@
+[
+  {
+    "title": "offre1",
+    "description": "Description de l'offre 1",
+    "tags": ["tag1", "tag2"],
+    "date": "2024-06-01"
+  },
+  {
+    "title": "offre2",
+    "description": "Description de l'offre 2",
+    "tags": ["tag2", "tag3"],
+    "date": "2024-06-02"
+  },
+  {
+    "title": "offre3",
+    "description": "Description de l'offre 3",
+    "tags": ["tag1", "tag3"],
+    "date": "2024-06-03"
+  }
+]
