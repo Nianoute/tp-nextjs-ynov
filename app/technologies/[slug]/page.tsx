@@ -36,8 +36,12 @@ export default async function OffrePage({ params }: OffrePageType) {
   }
 
   return (
-    <div>
-      <Link href="/offres">Voir toutes nos offres</Link>
+    <div className="p-5">
+      <Link href="/offres">
+        <button className="mb-6 inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100">
+          ← Voir toutes les offres
+        </button>
+      </Link>
       <Title>Offres pour la technologie : {slug}</Title>
       <ul>
         <OffresList offres={offresFiltrees} />

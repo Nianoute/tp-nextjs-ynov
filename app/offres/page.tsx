@@ -21,16 +21,22 @@ export default async function OffresPage() {
   });
 
   return (
-    <div>
+    <div className="p-5">
       <Title tag="h2">Offres d'emplois</Title>
       {offres.length > 1 && <p>{offres.length} offres</p>}
       {offres.length === 1 && <p>{offres.length} offre</p>}
 
-      {listeTechnologies.map((techno) => (
-        <Link href={`/technologies/${techno}`} key={techno}>
-          {techno}
-        </Link>
-      ))}
+      <div className="flex flex-wrap gap-2 my-4">
+        {listeTechnologies.map((techno) => (
+          <Link
+            href={`/technologies/${techno}`}
+            key={techno}
+            className="inline-block rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 transition-colors hover:bg-indigo-700 hover:text-white hover:border-indigo-700"
+          >
+            {techno}
+          </Link>
+        ))}
+      </div>
 
       <OffresList offres={offres} />
     </div>
